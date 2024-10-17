@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Flights - FlyDreamAir</title>
+    <link href="flights.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Search Flights</a></li>
+                <li><a href="manage-flights.html">Manage Flights</a></li>
+                <li><a href="inflight-services.html">In-Flight Services</a></li>
+            </ul>
+        </nav>
+        <h1>FlyDreamAir</h1>
+    </header>
+
+    <!-- header image,blue outline -->
+    <div class="background-image" style="background-image: url('resort-2.jpg');">
+        <div class="blue-gradient"></div> <!-- Gradient Overlay -->
+    </div>
+
+    <main>
+        <!-- flight search -->
+        <section class="flight-search">
+            <h2>Search for Flights</h2>
+            <form id="flight-search-form">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input type="text" id="from" placeholder="From" required>
+                        <input type="text" id="to" placeholder="To" required>
+                        <input type="date" id="date" required>
+                        <button type="submit">Search Flights</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- flight results -->
+            <div id="flight-results" class="flight-results"></div>
+        </section>
+
+        <!-- booking form -->
+        <div id="booking-popup" class="booking-popup" style="display: none;">
+            <div class="booking-popup-content">
+                <span class="close-popup">&times;</span>
+                <h2>Book Your Flight</h2>
+                <form id="booking-form">
+                    <div class="input-group">
+                        <input type="text" id="full-name" placeholder="Full Name" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="number" id="passport-number" placeholder="Passport Number" required>
+                        <input type="text" id="card-number" placeholder="Card Number" required>
+                        <input type="text" id="card-expiration" placeholder="Card Expiration Date (MM/YY)" required>
+                        <input type="text" id="card-cvv" placeholder="Card CVV" required>
+                        <button type="submit">Confirm Booking</button>
+                    </div>
+                </form>
+                <div id="booking-confirmation" class="booking-confirmation">
+                    <button id="close-confirmation" class="close-confirmation">X</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 FlyDreamAir. All Rights Reserved.</p>
+    </footer>
+
+    <script src="flights.js"></script>
+</body>
+</html>

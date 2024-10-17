@@ -1,0 +1,241 @@
+/* gen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f4fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+body.lock-scroll {
+    overflow: hidden;
+}
+
+/* header */
+header {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* header w blue */
+.background-image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 30px solid #005bb5;
+}
+
+.blue-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(transparent, #005bb5);
+}
+
+/* ifs section */
+.inflight-services-section {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.inflight-services-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.flight-details, .inflight-options {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+label, input, select {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* modal stylin */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 700px;
+    max-height: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.scrollable-menu {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: #ff0000;
+}
+
+/* menu items */
+.menu-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.menu-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+    border: 2px solid #ddd;
+}
+
+.menu-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.ingredients {
+    font-size: 1rem;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* confirm */
+.modal-confirmation {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: green;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* feet */
+footer {
+    background-color: #005bb5;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: auto; 
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}

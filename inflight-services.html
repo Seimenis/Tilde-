@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Flight Services - FlyDreamAir</title>
+    <link href="inflight-services.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Search Flights</a></li>
+                <li><a href="manage-flights.html">Manage Flights</a></li>
+                <li><a href="inflight-services.html">In-Flight Services</a></li>
+            </ul>
+        </nav>
+        <h1>FlyDreamAir</h1>
+    </header>
+
+    <!-- header image w blue outline gradient -->
+    <div class="background-image" style="background-image: url('resort-4.jpg');">
+        <div class="blue-gradient"></div> <!-- gradient overlay -->
+    </div>
+
+    <main>
+        <section class="inflight-services-section">
+            <h2>In-Flight Services</h2>
+
+            <!-- fn and seat input -->
+            <div class="flight-details">
+                <h3>Enter Your Flight and Seat Details</h3>
+                <label for="flight-number">Flight Number:</label>
+                <input type="text" id="flight-number" placeholder="Enter flight number" required>
+
+                <label for="seat-number">Seat Number:</label>
+                <input type="number" id="seat-number" placeholder="Enter seat number" min="1" max="100" required>
+
+                <label for="seat-section">Seat Position:</label>
+                <select id="seat-section">
+                    <option value="window">Window</option>
+                    <option value="middle">Middle</option>
+                    <option value="aisle">Aisle</option>
+                </select>
+
+                <button id="submit-flight-details">Submit</button>
+            </div>
+
+            <!-- inflight services options -->
+            <div id="inflight-options" class="inflight-options" style="display: none;">
+                <h3>In-Flight Services Available</h3>
+
+                <!-- menu -->
+                <div class="service-option">
+                    <h4>Menu for In-Flight Ordering</h4>
+                    <p>Choose from a variety of snacks, meals, and beverages.</p>
+                    <button id="order-food">Order Food</button>
+                </div>
+
+                <!-- request headphones -->
+                <div class="service-option">
+                    <h4>Request Headphones</h4>
+                    <p>Get a pair of noise-canceling headphones delivered to your seat.</p>
+                    <button id="request-headphones">Request Headphones</button>
+                </div>
+
+                <!-- toilets -->
+                <div class="service-option">
+                    <h4>Toilet Availability</h4>
+                    <p>Check the availability of the two toilets on board.</p>
+                    <div id="toilet-status">
+                        <p>Toilet 1: <span id="toilet1-status"></span></p>
+                        <p>Toilet 2: <span id="toilet2-status"></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="status-message" class="status-message"></div> <!-- status -->
+
+            <!-- modal for menu -->
+            <div id="food-menu-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span id="close-menu-popup" class="close">&times;</span>
+                    <h3>Select Your Food and Beverages</h3>
+                    <div id="menu-items" class="scrollable-menu">
+                        <!-- items -->
+                    </div>
+                    <button id="view-cart">View Cart</button>
+                </div>
+            </div>
+
+            <!-- cart plus checkout -->
+            <div id="cart-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span id="close-cart-popup" class="close">&times;</span>
+                    <h3>Your Cart</h3>
+                    <div id="cart-items">
+                        <!-- cartitems -->
+                    </div>
+                    <button id="checkout">Checkout</button>
+                </div>
+            </div>
+
+            <!-- checkout modal -->
+            <div id="checkout-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span id="close-checkout-popup" class="close">&times;</span>
+                    <h3>Checkout</h3>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" placeholder="Enter your card number" required>
+
+                    <label for="card-expiration">Expiration Date:</label>
+                    <input type="text" id="card-expiration" placeholder="MM/YY" required>
+
+                    <label for="card-cvv">CVV:</label>
+                    <input type="text" id="card-cvv" placeholder="CVV" required>
+
+                    <label for="email">Email for Receipt:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+
+                    <button id="confirm-checkout">Confirm Order</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 FlyDreamAir. All Rights Reserved.</p>
+    </footer>
+
+    <script src="inflight-services.js"></script>
+</body>
+</html>

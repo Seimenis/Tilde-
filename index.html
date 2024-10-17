@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyDreamAir - Welcome to Your Next Adventure!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <h1 class="outlined-text">FlyDreamAir</h1>
+                <img src="plane.jpg" alt="Small plane in corner" class="plane-header">
+            </div>
+        </div>
+        <h2>Ready to Take Off? Let's Plan Your Adventure!</h2>
+    </header>
+
+    <main>
+        <!-- search -->
+        <div class="background-image">
+            <div class="blue-gradient"></div> <!-- Gradient Overlay -->
+            <div class="button-block">
+                <div class="button-group">
+                    <button class="button active">Search for Flights</button>
+                    <button class="button">Manage Flights</button>
+                    <button class="button">In-Flight Services</button>
+                </div>
+
+                <div class="dropdowns">
+                    <div class="dropdown active">
+                        <div class="input-group">
+                            <input type="text" placeholder="From">
+                            <input type="text" placeholder="To">
+                            <input type="date" placeholder="Departure Date">
+                            <button>Search</button>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <div class="input-group">
+                            <input type="text" placeholder="Booking Reference">
+                            <input type="text" placeholder="Last Name">
+                            <button>Find Booking</button>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <div class="input-group">
+                            <input type="text" placeholder="Flight Number">
+                            <button>View Services</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- deals -->
+        <section class="flight-deals">
+            <h2>Latest Flight Deals from: 
+                <select id="departure-select">
+                    <option value="Sydney">Sydney</option>
+                    <option value="Melbourne">Melbourne</option>
+                    <option value="Brisbane">Brisbane</option>
+                </select>
+            </h2>
+
+            <div class="deals-grid">
+                <button class="deal-card">
+                    <h3>Adelaide</h3>
+                    <p>Economy one way from</p>
+                    <span class="price">$199*</span>
+                </button>
+                <button class="deal-card">
+                    <h3>Gold Coast</h3>
+                    <p>Economy one way from</p>
+                    <span class="price">$179*</span>
+                </button>
+                <button class="deal-card">
+                    <h3>Darwin</h3>
+                    <p>Economy one way from</p>
+                    <span class="price">$189*</span>
+                </button>
+                <button class="deal-card">
+                    <h3>Perth</h3>
+                    <p>Economy one way from</p>
+                    <span class="price">$249*</span>
+                    <span class="sale-badge">SALE</span>
+                </button>
+                <button class="deal-card">
+                    <h3>Cairns</h3>
+                    <p>Business return from</p>
+                    <span class="price">$999*</span>
+                    <span class="sale-badge">SALE</span>
+                </button>
+                <button class="deal-card">
+                    <h3>Hobart</h3>
+                    <p>Business return from</p>
+                    <span class="price">$1,199*</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- popular -->
+        <section class="holiday-destinations">
+            <h2>Explore Popular Destinations</h2>
+            <div class="destinations-grid">
+                <button class="destination">
+                    <img src="paris.jpg" alt="Paris">
+                    <p>Paris, France</p>
+                </button>
+                <button class="destination">
+                    <img src="sydney.jpg" alt="Sydney">
+                    <p>Sydney, Australia</p>
+                </button>
+                <button class="destination">
+                    <img src="new-york.jpg" alt="New York">
+                    <p>New York, USA</p>
+                </button>
+                <button class="destination">
+                    <img src="tokyo.jpg" alt="Tokyo">
+                    <p>Tokyo, Japan</p>
+                </button>
+                <button class="destination">
+                    <img src="rome.jpg" alt="Rome">
+                    <p>Rome, Italy</p>
+                </button>
+                <button class="destination">
+                    <img src="cairo.jpg" alt="Cairo">
+                    <p>Cairo, Egypt</p>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 FlyDreamAir. All Rights Reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

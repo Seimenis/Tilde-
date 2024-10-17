@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Flights - FlyDreamAir</title>
+    <link href="manage-flights.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Search Flights</a></li>
+                <li><a href="manage-flights.html">Manage Flights</a></li>
+                <li><a href="inflight-services.html">In-Flight Services</a></li>
+            </ul>
+        </nav>
+        <h1>FlyDreamAir</h1>
+    </header>
+
+    <!-- header image w blue outline -->
+    <div class="background-image" style="background-image: url('resort-3.jpg');">
+        <div class="blue-gradient"></div> <!-- gradient -->
+    </div>
+
+    <main>
+        <section class="manage-flight-section">
+            <h2>Manage Your Flight</h2>
+
+            <!-- lookup form -->
+            <div class="flight-lookup">
+                <h3>Enter Your Flight Details</h3>
+                <label for="booking-reference">Booking Reference:</label>
+                <input type="text" id="booking-reference" placeholder="Enter booking reference" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" placeholder="Enter your last name" required>
+
+                <button id="find-flight-btn">Find Flight</button>
+            </div>
+
+            <!-- seat selection -->
+            <div id="seat-selection-container" class="seat-selection" style="display: none;">
+                <h3>Select Your Seat</h3>
+                <label for="seat-number">Seat Number:</label>
+                <input type="number" id="seat-number" placeholder="Enter seat number" min="1" max="100">
+                
+                <label for="seat-section">Seat Section:</label>
+                <select id="seat-section">
+                    <option value="window">Window</option>
+                    <option value="middle">Middle</option>
+                    <option value="aisle">Aisle</option>
+                </select>
+
+                <button id="confirm-seat-selection">Confirm Seat</button>
+            </div>
+
+            <!-- cancel flight -->
+            <div id="cancel-flight-container" class="cancel-flight" style="display: none;">
+                <h3>Cancel Your Flight</h3>
+                <button id="cancel-flight-btn">Cancel Flight</button>
+                <div id="cancel-reason-popup" class="popup" style="display: none;">
+                    <h4>Why are you canceling your flight?</h4>
+                    <textarea id="cancel-reason" placeholder="Please provide a reason"></textarea>
+                    <button id="confirm-cancel">Confirm Cancel</button>
+                    <button id="close-popup">Close</button>
+                </div>
+            </div>
+
+            <div id="status-message" class="status-message"></div> <!-- status messages -->
+        </section>
+    </main>
+
+    <!-- sticky footer stupid  -->
+    <footer>
+        <p>© 2024 FlyDreamAir. All Rights Reserved.</p>
+    </footer>
+
+    <script src="manage-flights.js"></script>
+</body>
+</html>
